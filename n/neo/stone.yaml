@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : neo
+version     : "0.6.1"
+release     : 1
+homepage    : https://github.com/st3w/neo
+upstreams   :
+    - https://github.com/st3w/neo/releases/download/v0.6.1/neo-0.6.1.tar.gz : a55e4ed5efd0a4af248d16018a7aaad3b617ef1d3ac05d292a258a38aaf46a79
+summary     : Simulates the digital rain from "The Matrix", with 32-bit color and Unicode support
+description : |
+    neo recreates the digital rain effect from "The Matrix". Streams of random 
+    characters will endlessly scroll down your terminal screen. It has color and 
+    Unicode support, and convincingly simulates the effect from the movies with 
+    glitchy characters and uneven colors. 
+license     : GPL-3.0-only
+builddeps   :
+    - pkgconfig(ncursesw)
+setup       : |
+    %configure
+build       : |
+    %make
+install     : |
+    %make_install
