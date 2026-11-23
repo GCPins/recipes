@@ -2,13 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 releases:
-  id: 132873
-  rss: https://github.com/chojs23/concord/releases.atom
+  id: 393456
+  rss: ~
 security:
-  cpe:
-  - vendor: walmart
-    product: concord
-  - vendor: concord
-    product: ehealth_trapexploder
-  - vendor: concord
-    product: ehealth_console
+  cpe: ~
