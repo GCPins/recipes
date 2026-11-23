@@ -1,0 +1,39 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"concord": {
+			"build-depends": [
+				"binary(cmake)",
+				"binary(make)",
+				"binary(nasm)",
+				"pkgconfig(alsa)",
+				"pkgconfig(libpipewire-0.3)",
+				"pkgconfig(libva)"
+			],
+			"depends": [
+				"ca-certificates",
+				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
+				"soname(ld-linux-x86-64.so.2(x86_64))",
+				"soname(libasound.so.2(x86_64))",
+				"soname(libc.so.6(x86_64))",
+				"soname(libgcc_s.so.1(x86_64))",
+				"soname(libm.so.6(x86_64))",
+				"soname(libpipewire-0.3.so.0(x86_64))",
+				"soname(libstdc++.so.6(x86_64))",
+				"soname(libva-drm.so.2(x86_64))",
+				"soname(libva.so.2(x86_64))"
+			],
+			"files": [
+				"/usr/bin/concord"
+			],
+			"name": "concord",
+			"provides": [
+				"binary(concord)"
+			]
+		}
+	},
+	"source-name": "concord",
+	"source-release": "1",
+	"source-version": "2.7.2"
+}

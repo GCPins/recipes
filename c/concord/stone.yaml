@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : concord
+version     : "2.7.2"
+release     : 1
+homepage    : https://github.com/chojs23/concord
+upstreams   :
+    - https://github.com/chojs23/concord/releases/download/v2.7.2/source.tar.gz : 949d5a6dda9371a40fdac127db59a4c2a3bc68b861dcea3ff765f9587760f6e3
+summary     : A feature-rich TUI client for Discord
+description : |
+    Concord is a feature-rich TUI client for 
+    Discord, written in Rust with ratatui.
+license     : GPL-3.0-only
+networking  : true
+rundeps     :
+    - ca-certificates
+builddeps:
+    - pkgconfig(libpipewire-0.3)
+    - pkgconfig(alsa)
+    - pkgconfig(libva)
+    - binary(nasm)
+#    - clang-devel
+    - binary(cmake)
+    - binary(make)
+#    - binary(gcc)
+#    - binary(g++)
+setup       : |
+    %cargo_fetch
+build       : |
+    %cargo_build
+install     : |
+    %cargo_install
+check       : |
+    %cargo_test
