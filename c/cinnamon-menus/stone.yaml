@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: MPL-2.0
 
 name        : cinnamon-menus
-version     : 27
+version     : 6.8.0
 release     : 1
 homepage    : https://github.com/linuxmint/cinnamon-menus
 upstreams   :
-    - https://github.com/linuxmint/cinnamon-menus/archive/refs/tags/master.mint27.tar.gz : e47b99b35148efbada8cc9810e70283d67fbea8e15e4df1fab687614baa57957
+    - git|https://github.com/linuxmint/cinnamon-menus.git : 4b243dd8800a198e00192b9077bf6baa54ac4716 # 6.8.0
 summary     : The cinnamon-menu library
 description : |
     cinnamon-menus contains the libcinnamon-menu library, 
@@ -19,6 +19,12 @@ builddeps   :
 setup       : |
     %meson
 build       : |
+<<<<<<< HEAD
     %meson_build
 install     : |
     %meson_install
+=======
+    %ninja
+install     : |
+    %ninja_install
+>>>>>>> 682b6fb72 (cinnamon-menus: Add at 6.8.0)

@@ -47,5 +47,9 @@
 	},
 	"source-name": "cinnamon-menus",
 	"source-release": "1",
+<<<<<<< HEAD
 	"source-version": "27"
+=======
+	"source-version": "6.8.0"
+>>>>>>> 682b6fb72 (cinnamon-menus: Add at 6.8.0)
 }
