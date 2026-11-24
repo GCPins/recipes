@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : hyfetch
+version     : "2.1.1"
+release     : 1
+homepage    : https://github.com/hykilpikonna/hyfetch
+upstreams   :
+    - https://github.com/hykilpikonna/hyfetch/releases/download/2.1.1/hyfetch-2.1.1.tar.gz : 3dbc5165eeb1790ff9abbc257f834ff9cc6b0f6edd57ea10fcdd2a691710bc20
+summary     : Neofetch with LGBTQ+ pride flags!
+description : |
+    A command-line system information tool written in Rust & Python that expands upon 
+    Neofetch by coloring the OS's ASCII logo with configurable LGBTQ+ pride flag palettes. 
+    It also includes an actively maintained Neofetch/Neowofetch implementation, and easily 
+    integrates with alternative backends like fastfetch or macchina.
+license     : MIT
+networking  : true
+setup       : |
+    %cargo_fetch
+build       : |
+    %cargo_build
+install     : |
+    %cargo_install
+check       : |
+    %cargo_test
