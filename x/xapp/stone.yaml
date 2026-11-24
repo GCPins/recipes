@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : xapp
+version     : "3.4.2"
+release     : 1
+homepage    : https://github.com/linuxmint/xapp
+upstreams   :
+    - https://github.com/linuxmint/xapp/archive/refs/tags/3.4.2.tar.gz : 0da62c24e9defbebd8cd26c51c00f662724333ba4a6944ebfbfe130e8b59e3ba
+summary     : Cross-desktop libraries and common resources
+description : |
+    Ccross-desktop, cross-distribution open-source applications, 
+    libraries, and desktop integration tools for Linux Mint
+license     : GPL-3.0-only
+builddeps   :
+    - binary(msgfmt)
+    - binary(vapigen)
+    - pkgconfig(cairo)
+    - pkgconfig(dbus-1)
+    - pkgconfig(dbusmenu-gtk3-0.4)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gmodule-2.0)
+    - pkgconfig(gobject-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(pygobject-3.0)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
