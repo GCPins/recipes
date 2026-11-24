@@ -1,0 +1,85 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : muffin
+version     : 6.8.6
+release     : 1
+homepage    : https://github.com/linuxmint/muffin
+upstreams   :
+    - git|https://github.com/linuxmint/muffin.git : 1c5a2f8e9114fdd76562cfac7c6837b8de35fe39 # 6.8.6
+summary     : The window management library for the Cinnamon desktop (libmuffin) and its sample WM binary (muffin)
+description : |
+    Muffin is a fork of Mutter, specifically adapted to work as
+    the window manager for the Cinnamon desktop environment.
+license     : GPL-2.0-only
+builddeps   :
+    - binary(Xwayland)
+    - binary(msgfmt)
+    - pkgconfig(atk)
+    - pkgconfig(cairo)
+    - pkgconfig(cairo-gobject)
+    - pkgconfig(cinnamon-desktop)
+    - pkgconfig(egl)
+    - pkgconfig(fribidi)
+    - pkgconfig(gbm)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(gl)
+    - pkgconfig(glesv2)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gmodule-no-export-2.0)
+    - pkgconfig(gobject-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(graphene-gobject-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gudev-1.0)
+    - pkgconfig(ice)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libcanberra)
+    - pkgconfig(libdrm)
+    #- pkgconfig(libelogind)
+    - pkgconfig(libinput)
+    - pkgconfig(libpipewire-0.3)
+    - pkgconfig(libstartup-notification-1.0)
+    - pkgconfig(libsystemd)
+    - pkgconfig(libudev)
+    - pkgconfig(libwacom)
+    - pkgconfig(pango)
+    - pkgconfig(pangocairo)
+    - pkgconfig(pangoft2)
+    - pkgconfig(sm)
+    #- pkgconfig(sysprof-capture-3)
+    - pkgconfig(udev)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-egl)
+    - pkgconfig(wayland-eglstream-protocols)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(wayland-server)
+    - pkgconfig(x11)
+    - pkgconfig(x11-xcb)
+    - pkgconfig(xau)
+    - pkgconfig(xcb-randr)
+    - pkgconfig(xcb-res)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xcursor)
+    - pkgconfig(xdamage)
+    - pkgconfig(xext)
+    - pkgconfig(xfixes)
+    - pkgconfig(xi)
+    - pkgconfig(xinerama)
+    - pkgconfig(xkbcommon)
+    - pkgconfig(xkbcommon-x11)
+    - pkgconfig(xkbfile)
+    - pkgconfig(xkeyboard-config)
+    - pkgconfig(xrandr)
+    - pkgconfig(xrender)
+    - pkgconfig(xtst)
+    - pkgconfig(xwayland)
+    - mesa-libegl-devel
+setup       : |
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath,/usr/lib/muffin"
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
