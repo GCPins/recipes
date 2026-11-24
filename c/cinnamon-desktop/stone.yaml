@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cinnamon-desktop
+version     : 27
+release     : 1
+homepage    : https://github.com/linuxmint/cinnamon-desktop
+upstreams   :
+    - https://github.com/linuxmint/cinnamon-desktop/archive/refs/tags/master.mint27.tar.gz : 8dd704a402bbd547a5a82f5dbd9dc8e972a783c2d8c644ecaaee471ebc7e28f1
+summary     : The cinnamon-desktop library (and common settings schemas for the cinnamon desktop)
+description : |
+    cinnamon-desktop contains the libcinnamon-desktop library, 
+    the cinnamon-about program as well as some desktop-wide documents.
+
+license     : GPL-2.0-only
+builddeps   :
+    - pkgconfig(fontconfig)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(iso-codes)
+    - pkgconfig(libseccomp)
+    - pkgconfig(libsystemd)
+    - pkgconfig(libpulse)
+    - pkgconfig(libudev)
+    - pkgconfig(x11)
+    - pkgconfig(xext)
+    - pkgconfig(xkbfile)
+    - pkgconfig(xkeyboard-config)
+    - pkgconfig(xrandr)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
