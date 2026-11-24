@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cinnamon-settings-daemon
+version     : "6.8.2"
+release     : 1
+homepage    : https://github.com/linuxmint/cinnamon-settings-daemon
+upstreams   :
+    - https://github.com/linuxmint/cinnamon-settings-daemon/archive/refs/tags/6.8.2.tar.gz : 530b783c06316a45a96dfe67a689c5c56330cfb6b13397b6f327180e31761055
+summary     : The settings daemon for the Cinnamon desktop
+description : |
+    A collection of processes which run in 
+    the background during your Cinnamon session.
+license     : 
+    - GPL-2.0-only
+    - LGPL-2.1-only
+builddeps   :
+    - pkgconfig(cinnamon-desktop)
+    - pkgconfig(colord)
+    - pkgconfig(cups)
+    - pkgconfig(cvc)
+    - pkgconfig(fontconfig)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gudev-1.0)
+    - pkgconfig(lcms2)
+    - pkgconfig(libcanberra-gtk3)
+    - pkgconfig(libnotify)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(libsystemd)
+    - pkgconfig(libwacom)
+    - pkgconfig(nss)
+    - pkgconfig(pango)
+    - pkgconfig(polkit-gobject-1)
+    - pkgconfig(upower-glib)
+    - pkgconfig(x11)
+    - pkgconfig(xext)
+    - pkgconfig(xi)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
