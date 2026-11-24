@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cjs
+version     : "140.3"
+release     : 1
+homepage    : https://github.com/linuxmint/cjs
+upstreams   :
+    - https://github.com/linuxmint/cjs/archive/refs/tags/140.3.tar.gz : 17401dce140cff85f5662d1fcfcac2a4628d21486a114b4adbeea4f364517348
+summary     : The Cinnamon Javascript interpreter
+description : |
+    CJS is Cinnamon’s Javascript interpreter. It uses MozJS and 
+    makes it possible to work with GObject and interact with GIR, 
+    GNOME and Cinnamon libraries using that language.
+license     : 
+    - LGPL-2.0-or-later
+    - MIT
+builddeps   :
+    - binary(dbus-run-session)
+    - binary(glib-compile-schemas)
+    - pkgconfig(cairo)
+    - pkgconfig(cairo-gobject)
+    - pkgconfig(cairo-xlib)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(girepository-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gobject-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gthread-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gtk4)
+    - pkgconfig(libffi)
+    - pkgconfig(mozjs-140)
+    - pkgconfig(sysprof-capture-4)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
