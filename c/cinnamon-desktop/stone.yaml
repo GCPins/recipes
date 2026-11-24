@@ -2,11 +2,11 @@
 # SPDX-License-Identifier: MPL-2.0
 
 name        : cinnamon-desktop
-version     : 27
+version     : 6.8.1
 release     : 1
 homepage    : https://github.com/linuxmint/cinnamon-desktop
 upstreams   :
-    - https://github.com/linuxmint/cinnamon-desktop/archive/refs/tags/master.mint27.tar.gz : 8dd704a402bbd547a5a82f5dbd9dc8e972a783c2d8c644ecaaee471ebc7e28f1
+    - git|https://github.com/linuxmint/cinnamon-desktop.git : a0d84f884f7f32a5d541a3607133528b00755e38 # 6.8.1
 summary     : The cinnamon-desktop library (and common settings schemas for the cinnamon desktop)
 description : |
     cinnamon-desktop contains the libcinnamon-desktop library, 
@@ -33,6 +33,12 @@ builddeps   :
 setup       : |
     %meson
 build       : |
+<<<<<<< HEAD
     %meson_build
 install     : |
     %meson_install
+=======
+    %ninja
+install     : |
+    %ninja_install
+>>>>>>> 21c4ba1 (cinnamon-desktop: Add at 6.8.1)
