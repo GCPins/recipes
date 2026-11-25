@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cinnamon-screensaver
+version     : "6.8.1"
+release     : 1
+homepage    : https://github.com/linuxmint/cinnamon-screensaver
+upstreams   :
+    - https://github.com/linuxmint/cinnamon-screensaver/archive/refs/tags/6.8.1.tar.gz : 1ff4a02d7a87fed91950093f4fb49eb9bbc6328d1f3ce47b7372e5e25e88a86a
+summary     : The Cinnamon screen locker and screensaver program
+description : |
+    Python application responsible for locking the screen, and to 
+    a lesser extent for handling some power management functions.
+license     : GPL-2.0-only
+builddeps   :
+    - pkgconfig(dbus-1)
+    - pkgconfig(gdk-x11-3.0)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gobject-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gthread-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libxdo)
+    - pkgconfig(pam)
+    - pkgconfig(x11)
+    - pkgconfig(xext)
+    - pkgconfig(xinerama)
+    - pkgconfig(xrandr)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
