@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cloudflared
+version     : "2026.11.2"
+release     : 1
+homepage    : https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/
+upstreams   :
+    - https://github.com/cloudflare/cloudflared/archive/refs/tags/2026.11.2.tar.gz : e135894809a639d248f46636088ea8b659ed4d063be4873a541b2d9c2de36790
+summary     : Cloudflare Tunnel client
+description : |
+    Command-line client for Cloudflare Tunnel, a tunneling daemon that 
+    proxies traffic from the Cloudflare network to your origins. This daemon 
+    sits between Cloudflare network and your origin (e.g. a webserver). Cloudflare 
+    attracts client requests and sends them to you via this daemon, without requiring 
+    you to poke holes on your firewall --- your origin can remain as closed as possible.
+license     : Apache-2.0
+networking: true
+builddeps   :
+    - pkgconfig(capnp)
+setup       : |
+    %go_mod
+build       : |
+    %make cloudflared
+install     : |
+    %install_bin %(name)
+check       : |
+    %make test
