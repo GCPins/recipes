@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : witr
+version     : "0.3.4"
+release     : 1
+homepage    : https://github.com/pranshuparmar/witr
+upstreams   :
+    - https://github.com/pranshuparmar/witr/archive/refs/tags/v0.3.4.tar.gz : 5f5d275b39054c7e879749e5d411bb4cf7ac50e023fd4f8890d69ce7085bc83f
+summary     : Trace any process, port, container, or file back to what started it
+description : |
+    Source any process, port, container, or file back to the 
+    exact chain that started it, with one command, machine-readable 
+    JSON, or an interactive TUI.
+license     : Apache-2.0
+networking: true
+setup       : |
+    %go_mod
+build       : |
+    # using "%make build" errors with a complaint that cgo is 
+    # not enabled, so we explicity enable it before building
+    CGO_ENABLED=1 go build -o witr ./cmd/witr
+install     : |
+    %install_bin %(name)
+check       : |
+    %make test
