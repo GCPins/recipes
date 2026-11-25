@@ -1,0 +1,30 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"typst": {
+			"build-depends": [
+				"pkgconfig(openssl)"
+			],
+			"depends": [
+				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
+				"soname(ld-linux-x86-64.so.2(x86_64))",
+				"soname(libc.so.6(x86_64))",
+				"soname(libcrypto.so.4(x86_64))",
+				"soname(libgcc_s.so.1(x86_64))",
+				"soname(libm.so.6(x86_64))",
+				"soname(libssl.so.4(x86_64))"
+			],
+			"files": [
+				"/usr/bin/typst"
+			],
+			"name": "typst",
+			"provides": [
+				"binary(typst)"
+			]
+		}
+	},
+	"source-name": "typst",
+	"source-release": "1",
+	"source-version": "0.15.1"
+}
