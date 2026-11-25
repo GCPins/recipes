@@ -1,0 +1,19 @@
+--- a/src/nemo-main-application.c
++++ b/src/nemo-main-application.c
+@@ -726,14 +726,14 @@
+ 	gboolean open_in_existing_window = strcmp (options, "EXISTING_WINDOW") == 0;
+ 	gboolean default_no_args = FALSE;
+ 	gboolean select_mode = FALSE;
+-	const char splitter = '=';
++	const gchar splitter[] = "=";
+
+ 	g_debug ("Open called on the GApplication instance; %d files", n_files);
+
+ 	if (!open_in_existing_window) {
+ 		/* Check if local command line passed --geometry, --tabs or --select */
+ 		if (strlen (options) > 0) {
+-			gchar** split_options = g_strsplit (options, &splitter, 2);
++			gchar** split_options = g_strsplit (options, splitter, 2);
+ 			if (strcmp (split_options[0], "SELECT") == 0) {
+ 				select_mode = TRUE;
+ 			} else if (g_str_has_prefix (split_options[0], "DEFAULT")) {

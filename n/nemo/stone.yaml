@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : nemo
+version     : "6.8.5"
+release     : 1
+homepage    : https://github.com/linuxmint/nemo
+upstreams   :
+    - https://github.com/linuxmint/nemo/archive/refs/tags/6.8.5.tar.gz : 8ecbf936f933f5b99546193861a08a9ace6fea5e48bf71de2040cc6d31e9d328
+summary     : File browser for Cinnamon
+description : |
+    Nemo is a free and open-source software and the official file manager of 
+    the Cinnamon Desktop Environment. It is a fork of GNOME Files (formerly Nautilus).
+license     : 
+    - LGPL-2.0-or-later
+    - GPL-2.0-only
+builddeps   :
+    - binary(gtkdoc-scan)
+    - pkgconfig(cinnamon-desktop)
+    - pkgconfig(exempi-2.0)
+    - pkgconfig(gail-3.0)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gmodule-no-export-2.0)
+    - pkgconfig(gobject-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(gstreamer-app-1.0)
+    - pkgconfig(gstreamer-pbutils-1.0)
+    - pkgconfig(gstreamer-video-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gtk-layer-shell-0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libexif)
+    - pkgconfig(libgsf-1)
+    - pkgconfig(pango)
+    - pkgconfig(wayland-client)
+    - pkgconfig(x11)
+    - pkgconfig(xapp)
+setup       : |
+    %patch %(pkgdir)/fix-splitter-null.patch
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
