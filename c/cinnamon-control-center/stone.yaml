@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cinnamon-control-center
+version     : "6.8.1"
+release     : 1
+homepage    : https://github.com/linuxmint/cinnamon-control-center
+upstreams   :
+    - https://github.com/linuxmint/cinnamon-control-center/archive/refs/tags/6.8.1.tar.gz : c58c03a4de6102946ba97a54140f9cf20b909f9e3ca70d515d0d41de931bb705
+summary     : A collection of configuration plugins used in cinnamon-settings
+description : |
+    C plugins that provide color profiles, date and time configuration, 
+    display and monitors configuration, network configuration, online 
+    accounts configuration, and wacom devices configuration.
+license     : GPL-2.0-only
+builddeps   :
+    - pkgconfig(cinnamon-desktop)
+    - pkgconfig(colord)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gudev-1.0)
+    - pkgconfig(libcinnamon-menu-3.0)
+    - pkgconfig(libnm)
+    - pkgconfig(libnma)
+    - pkgconfig(libnotify)
+    - pkgconfig(libwacom)
+    - pkgconfig(mm-glib)
+    - pkgconfig(polkit-gobject-1)
+    - pkgconfig(upower-glib)
+    - pkgconfig(x11)
+    - pkgconfig(xi)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install

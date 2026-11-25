@@ -1,0 +1,133 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"cinnamon-control-center": {
+			"build-depends": [
+				"pkgconfig(cinnamon-desktop)",
+				"pkgconfig(colord)",
+				"pkgconfig(gio-unix-2.0)",
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(gudev-1.0)",
+				"pkgconfig(libcinnamon-menu-3.0)",
+				"pkgconfig(libnm)",
+				"pkgconfig(libnma)",
+				"pkgconfig(libnotify)",
+				"pkgconfig(libwacom)",
+				"pkgconfig(mm-glib)",
+				"pkgconfig(polkit-gobject-1)",
+				"pkgconfig(upower-glib)",
+				"pkgconfig(x11)",
+				"pkgconfig(xi)"
+			],
+			"depends": [
+				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
+				"soname(libX11.so.6(x86_64))",
+				"soname(libXi.so.6(x86_64))",
+				"soname(libatk-1.0.so.0(x86_64))",
+				"soname(libc.so.6(x86_64))",
+				"soname(libcairo.so.2(x86_64))",
+				"soname(libcinnamon-menu-3.so.0(x86_64))",
+				"soname(libcolord.so.2(x86_64))",
+				"soname(libgcc_s.so.1(x86_64))",
+				"soname(libgdk-3.so.0(x86_64))",
+				"soname(libgdk_pixbuf-2.0.so.0(x86_64))",
+				"soname(libgio-2.0.so.0(x86_64))",
+				"soname(libglib-2.0.so.0(x86_64))",
+				"soname(libgobject-2.0.so.0(x86_64))",
+				"soname(libgtk-3.so.0(x86_64))",
+				"soname(libgudev-1.0.so.0(x86_64))",
+				"soname(libmm-glib.so.0(x86_64))",
+				"soname(libnm.so.0(x86_64))",
+				"soname(libnma.so.0(x86_64))",
+				"soname(libnotify.so.4(x86_64))",
+				"soname(libpango-1.0.so.0(x86_64))",
+				"soname(libpolkit-gobject-1.so.0(x86_64))",
+				"soname(libupower-glib.so.3(x86_64))",
+				"soname(libwacom.so.9(x86_64))"
+			],
+			"files": [
+				"/usr/bin/cinnamon-control-center",
+				"/usr/lib/cinnamon-control-center-1/panels/libcolor.so",
+				"/usr/lib/cinnamon-control-center-1/panels/libdisplay.so",
+				"/usr/lib/cinnamon-control-center-1/panels/libnetwork.so",
+				"/usr/lib/cinnamon-control-center-1/panels/libwacom-properties.so",
+				"/usr/lib/libcinnamon-control-center.so.1",
+				"/usr/lib/libcinnamon-control-center.so.1.0.0",
+				"/usr/share/applications/cinnamon-color-panel.desktop",
+				"/usr/share/applications/cinnamon-network-panel.desktop",
+				"/usr/share/applications/cinnamon-wacom-panel.desktop",
+				"/usr/share/cinnamon-control-center/panels/cinnamon-color-panel.desktop",
+				"/usr/share/cinnamon-control-center/panels/cinnamon-network-panel.desktop",
+				"/usr/share/cinnamon-control-center/panels/cinnamon-wacom-panel.desktop",
+				"/usr/share/cinnamon-control-center/ui/color.ui",
+				"/usr/share/cinnamon-control-center/ui/network.ui",
+				"/usr/share/cinnamon-control-center/ui/shell.ui",
+				"/usr/share/glib-2.0/schemas/org.cinnamon.control-center.display.gschema.xml",
+				"/usr/share/icons/hicolor/16x16/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/16x16/apps/cinnamon-preferences-desktop-display.png",
+				"/usr/share/icons/hicolor/22x22/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/22x22/apps/cinnamon-preferences-desktop-display.png",
+				"/usr/share/icons/hicolor/24x24/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/24x24/apps/cinnamon-preferences-desktop-display.png",
+				"/usr/share/icons/hicolor/256x256/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/32x32/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/32x32/apps/cinnamon-preferences-desktop-display.png",
+				"/usr/share/icons/hicolor/48x48/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/64x64/apps/cinnamon-preferences-color.png",
+				"/usr/share/icons/hicolor/scalable/apps/cinnamon-preferences-color.svg",
+				"/usr/share/icons/hicolor/scalable/apps/cinnamon-preferences-desktop-display.svg"
+			],
+			"name": "cinnamon-control-center",
+			"provides": [
+				"binary(cinnamon-control-center)",
+				"soname(cinnamon-control-center-1/panels/libcolor.so(x86_64))",
+				"soname(cinnamon-control-center-1/panels/libdisplay.so(x86_64))",
+				"soname(cinnamon-control-center-1/panels/libnetwork.so(x86_64))",
+				"soname(cinnamon-control-center-1/panels/libwacom-properties.so(x86_64))",
+				"soname(libcinnamon-control-center.so.1(x86_64))"
+			]
+		},
+		"cinnamon-control-center-devel": {
+			"build-depends": [
+				"pkgconfig(cinnamon-desktop)",
+				"pkgconfig(colord)",
+				"pkgconfig(gio-unix-2.0)",
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(gudev-1.0)",
+				"pkgconfig(libcinnamon-menu-3.0)",
+				"pkgconfig(libnm)",
+				"pkgconfig(libnma)",
+				"pkgconfig(libnotify)",
+				"pkgconfig(libwacom)",
+				"pkgconfig(mm-glib)",
+				"pkgconfig(polkit-gobject-1)",
+				"pkgconfig(upower-glib)",
+				"pkgconfig(x11)",
+				"pkgconfig(xi)"
+			],
+			"depends": [
+				"cinnamon-control-center",
+				"pkgconfig(gio-2.0)",
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)"
+			],
+			"files": [
+				"/usr/include/cinnamon-control-center-1/libcinnamon-control-center/cc-editable-entry.h",
+				"/usr/include/cinnamon-control-center-1/libcinnamon-control-center/cc-panel.h",
+				"/usr/include/cinnamon-control-center-1/libcinnamon-control-center/cc-shell.h",
+				"/usr/lib/libcinnamon-control-center.so",
+				"/usr/lib/pkgconfig/libcinnamon-control-center.pc"
+			],
+			"name": "cinnamon-control-center-devel",
+			"provides": [
+				"pkgconfig(libcinnamon-control-center)"
+			]
+		}
+	},
+	"source-name": "cinnamon-control-center",
+	"source-release": "1",
+	"source-version": "6.8.1"
+}
