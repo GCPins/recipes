@@ -1,0 +1,61 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cinnamon
+version     : "6.8.4"
+release     : 1
+homepage    : https://github.com/linuxmint/cinnamon
+upstreams   :
+    - https://github.com/linuxmint/cinnamon/archive/refs/tags/6.8.4.tar.gz : d9cf68046c5d115f38d18b734dbd2dfad53c67a861942282e17cdd4688b5cf8d
+summary     : A Linux desktop featuring a traditional layout, built from modern technology and introducing innovative features. 
+description : |
+    Linux desktop that provides advanced innovative features and a traditional user experience.
+    The desktop layout is similar to GNOME 2, with underlying technology forked from the GNOME Shell. 
+license     : 
+    - GPL-2.0-only
+builddeps   :
+    - binary(msgfmt)
+    - binary(perl)
+    - binary(python3)
+    - binary(sassc)
+    - pkgconfig(atk-bridge-2.0)
+    - pkgconfig(atspi-2)
+    - pkgconfig(cairo-xlib)
+    - pkgconfig(cjs-1.0)
+    - pkgconfig(dbus-1)
+    - pkgconfig(gcr-base-3)
+    - pkgconfig(gdk-x11-3.0)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(girepository-2.0)
+    - pkgconfig(gl)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(gstreamer-base-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gtk4)
+    - pkgconfig(gtk4-layer-shell-0)
+    - pkgconfig(libcinnamon-menu-3.0)
+    - pkgconfig(libmuffin-0)
+    - pkgconfig(libnm)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(libxdo)
+    - pkgconfig(pam)
+    - pkgconfig(muffin-clutter-0)
+    - pkgconfig(muffin-cogl-0)
+    - pkgconfig(muffin-cogl-pango-0)
+    - pkgconfig(muffin-cogl-path-0)
+    - pkgconfig(polkit-agent-1)
+    - pkgconfig(systemd)
+    - pkgconfig(x11)
+    - pkgconfig(xapp)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xext)
+    - mesa-libegl-devel
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install

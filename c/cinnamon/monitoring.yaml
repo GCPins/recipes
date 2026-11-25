@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+releases:
+  id: 6265
+  rss: https://github.com/linuxmint/cinnamon/releases.atom
+security:
+  cpe:
+  - vendor: linuxmint
+    product: cinnamon
