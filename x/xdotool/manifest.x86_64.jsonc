@@ -1,0 +1,59 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"xdotool": {
+			"build-depends": [
+				"binary(pod2man)",
+				"pkgconfig(x11)",
+				"pkgconfig(xinerama)",
+				"pkgconfig(xkbcommon)",
+				"pkgconfig(xtst)"
+			],
+			"depends": [
+				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
+				"soname(libX11.so.6(x86_64))",
+				"soname(libXinerama.so.1(x86_64))",
+				"soname(libXtst.so.6(x86_64))",
+				"soname(libc.so.6(x86_64))",
+				"soname(libm.so.6(x86_64))",
+				"soname(libxkbcommon.so.0(x86_64))"
+			],
+			"files": [
+				"/usr/bin/xdotool",
+				"/usr/lib/libxdo.so.4",
+				"/usr/share/man/man1/xdotool.1"
+			],
+			"name": "xdotool",
+			"provides": [
+				"binary(xdotool)",
+				"soname(libxdo.so.4(x86_64))"
+			]
+		},
+		"xdotool-devel": {
+			"build-depends": [
+				"binary(pod2man)",
+				"pkgconfig(x11)",
+				"pkgconfig(xinerama)",
+				"pkgconfig(xkbcommon)",
+				"pkgconfig(xtst)"
+			],
+			"depends": [
+				"pkgconfig(x11)",
+				"xdotool"
+			],
+			"files": [
+				"/usr/include/xdo.h",
+				"/usr/lib/libxdo.so",
+				"/usr/lib/pkgconfig/libxdo.pc"
+			],
+			"name": "xdotool-devel",
+			"provides": [
+				"pkgconfig(libxdo)"
+			]
+		}
+	},
+	"source-name": "xdotool",
+	"source-release": "1",
+	"source-version": "4.20260303.1"
+}

@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : xdotool
+version     : "4.20260303.1"
+release     : 1
+homepage    : https://github.com/jordansissel/xdotool
+upstreams   :
+    - https://github.com/jordansissel/xdotool/archive/refs/tags/v4.20260303.1.tar.gz : c1f971a384da588eb99ca0755fc4300316d49c1e612537e3f1de52215e104fa3
+summary     : fake keyboard/mouse input, window management, and more 
+description : |
+    Simulate keyboard input and mouse activity, move and resize windows, etc. 
+    Search for windows and move, resize, hide, and modify window properties like 
+    the title. If your window manager supports it, you can use xdotool to switch 
+    desktops, move windows between desktops, and change the number of desktops.
+license     : BSD-3-Clause
+builddeps   :
+    - binary(pod2man)
+    - pkgconfig(x11)
+    - pkgconfig(xinerama)
+    - pkgconfig(xkbcommon)
+    - pkgconfig(xtst)
+build       : |
+    %make WITHOUT_RPATH_FIX=1 PREFIX=/usr
+install     : |
+    %make_install INSTALLMAN=/usr/share/man PREFIX=/usr
