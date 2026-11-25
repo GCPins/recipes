@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : cinnamon-session
+version     : "6.8.0"
+release     : 1
+homepage    : https://github.com/linuxmint/cinnamon-session
+upstreams   :
+    - https://github.com/linuxmint/cinnamon-session/archive/refs/tags/6.8.0.tar.gz : 51889bd9797e4ea7c46cff11fa62f8952185dccede4c5fc44add1b79e174dc84
+summary     : The Cinnamon session manager
+description : |
+    Responsible for launching all the components needed by the session after log in, and 
+    closing the session properly upon log out. Launches the core components required by the 
+    session, as well as applications which are configured to start automatically. Also provides a 
+    DBus interface called the Presence interface, and lets applications register so they can be closed cleanly. 
+license     : GPL-2.0-only
+builddeps   :
+    - pkgconfig(cinnamon-desktop)
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gio-unix-2.0)
+    - pkgconfig(gl)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(ice)
+    - pkgconfig(libcanberra)
+#    - pkgconfig(libelogind)
+    - pkgconfig(libsystemd)
+#    - pkgconfig(libsystemd-login)
+    - pkgconfig(pango)
+    - pkgconfig(pangoxft)
+    - pkgconfig(sm)
+    - pkgconfig(systemd)
+    - pkgconfig(x11)
+    - pkgconfig(xapp)
+    - pkgconfig(xau)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xext)
+    - pkgconfig(xrender)
+    - pkgconfig(xtrans)
+    - pkgconfig(xtst)
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
