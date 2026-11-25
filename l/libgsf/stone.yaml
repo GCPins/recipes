@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : libgsf
+version     : "1.14.60"
+release     : 1
+homepage    : https://download.gnome.org/sources/libgsf/1.14
+upstreams   :
+    - https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.60.tar.xz : 83e12c36a099a8a7019bf425e2c24af66eeb2ef5874251e694431a07d9805dae
+summary     : The GNOME Structured File Library
+description : |
+     Provides an efficient extensible i/o abstraction for
+     dealing with different structured file formats.
+license     : LGPL-2.1-only
+builddeps   :
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(libxml-2.0)
+setup       : |
+    %configure
+build       : |
+    %make
+install     : |
+    %make_install
