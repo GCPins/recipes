@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : libtimezonemap
+version     : "0.4.4"
+release     : 1
+homepage    : https://launchpad.net/timezonemap/trunk/0.4.4/+download
+upstreams   :
+    - https://launchpad.net/timezonemap/trunk/0.4.4/+download/libtimezonemap-0.4.4.tar.xz : a350b369e787edb154c84f9db945af0c57da0d56b007de526464d0217294e45f
+summary     : A GTK+3 timezone map widget
+description : |
+    GTK+3 interactive world map widget that allows
+    users visually pick a city or time zone.
+license     : GPL-2.0-or-later
+builddeps   :
+    - pkgconfig(gio-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(libsoup-2.4)
+    - pkgconfig(json-glib-1.0)
+setup       : |
+    %configure
+build       : |
+    %make
+install     : |
+    %make_install

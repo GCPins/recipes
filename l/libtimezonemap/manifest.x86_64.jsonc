@@ -1,0 +1,118 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"libtimezonemap": {
+			"build-depends": [
+				"pkgconfig(gio-2.0)",
+				"pkgconfig(gobject-introspection-1.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(json-glib-1.0)",
+				"pkgconfig(libsoup-2.4)"
+			],
+			"depends": [
+				"soname(libatk-1.0.so.0(x86_64))",
+				"soname(libc.so.6(x86_64))",
+				"soname(libcairo-gobject.so.2(x86_64))",
+				"soname(libcairo.so.2(x86_64))",
+				"soname(libgdk-3.so.0(x86_64))",
+				"soname(libgdk_pixbuf-2.0.so.0(x86_64))",
+				"soname(libgio-2.0.so.0(x86_64))",
+				"soname(libglib-2.0.so.0(x86_64))",
+				"soname(libgmodule-2.0.so.0(x86_64))",
+				"soname(libgobject-2.0.so.0(x86_64))",
+				"soname(libgtk-3.so.0(x86_64))",
+				"soname(libharfbuzz.so.0(x86_64))",
+				"soname(libjson-glib-1.0.so.0(x86_64))",
+				"soname(libm.so.6(x86_64))",
+				"soname(libpango-1.0.so.0(x86_64))",
+				"soname(libpangocairo-1.0.so.0(x86_64))",
+				"soname(libsoup-2.4.so.1(x86_64))"
+			],
+			"files": [
+				"/usr/lib/girepository-1.0/TimezoneMap-1.0.typelib",
+				"/usr/lib/libtimezonemap.so.1",
+				"/usr/lib/libtimezonemap.so.1.0.0",
+				"/usr/share/libtimezonemap/backward",
+				"/usr/share/libtimezonemap/ui/admin1Codes.txt",
+				"/usr/share/libtimezonemap/ui/bg.png",
+				"/usr/share/libtimezonemap/ui/cities15000.txt",
+				"/usr/share/libtimezonemap/ui/countryInfo.txt",
+				"/usr/share/libtimezonemap/ui/olsen_map.png",
+				"/usr/share/libtimezonemap/ui/pin.png",
+				"/usr/share/libtimezonemap/ui/timezone_-1.png",
+				"/usr/share/libtimezonemap/ui/timezone_-10.png",
+				"/usr/share/libtimezonemap/ui/timezone_-11.png",
+				"/usr/share/libtimezonemap/ui/timezone_-2.png",
+				"/usr/share/libtimezonemap/ui/timezone_-3.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_-3.png",
+				"/usr/share/libtimezonemap/ui/timezone_-4.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_-4.png",
+				"/usr/share/libtimezonemap/ui/timezone_-5.png",
+				"/usr/share/libtimezonemap/ui/timezone_-6.png",
+				"/usr/share/libtimezonemap/ui/timezone_-7.png",
+				"/usr/share/libtimezonemap/ui/timezone_-8.png",
+				"/usr/share/libtimezonemap/ui/timezone_-9.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_-9.png",
+				"/usr/share/libtimezonemap/ui/timezone_0.png",
+				"/usr/share/libtimezonemap/ui/timezone_1.png",
+				"/usr/share/libtimezonemap/ui/timezone_10.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_10.png",
+				"/usr/share/libtimezonemap/ui/timezone_11.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_11.png",
+				"/usr/share/libtimezonemap/ui/timezone_12.75.png",
+				"/usr/share/libtimezonemap/ui/timezone_12.png",
+				"/usr/share/libtimezonemap/ui/timezone_13.png",
+				"/usr/share/libtimezonemap/ui/timezone_2.png",
+				"/usr/share/libtimezonemap/ui/timezone_3.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_3.png",
+				"/usr/share/libtimezonemap/ui/timezone_4.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_4.png",
+				"/usr/share/libtimezonemap/ui/timezone_5.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_5.75.png",
+				"/usr/share/libtimezonemap/ui/timezone_5.png",
+				"/usr/share/libtimezonemap/ui/timezone_6.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_6.png",
+				"/usr/share/libtimezonemap/ui/timezone_7.png",
+				"/usr/share/libtimezonemap/ui/timezone_8.png",
+				"/usr/share/libtimezonemap/ui/timezone_9.5.png",
+				"/usr/share/libtimezonemap/ui/timezone_9.png"
+			],
+			"name": "libtimezonemap",
+			"provides": [
+				"soname(libtimezonemap.so.1(x86_64))"
+			]
+		},
+		"libtimezonemap-devel": {
+			"build-depends": [
+				"pkgconfig(gio-2.0)",
+				"pkgconfig(gobject-introspection-1.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(json-glib-1.0)",
+				"pkgconfig(libsoup-2.4)"
+			],
+			"depends": [
+				"libtimezonemap",
+				"pkgconfig(gio-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(json-glib-1.0)"
+			],
+			"files": [
+				"/usr/include/timezonemap/timezonemap/cc-timezone-location.h",
+				"/usr/include/timezonemap/timezonemap/cc-timezone-map.h",
+				"/usr/include/timezonemap/timezonemap/timezone-completion.h",
+				"/usr/include/timezonemap/timezonemap/tz.h",
+				"/usr/lib/libtimezonemap.so",
+				"/usr/lib/pkgconfig/timezonemap.pc",
+				"/usr/share/gir-1.0/TimezoneMap-1.0.gir"
+			],
+			"name": "libtimezonemap-devel",
+			"provides": [
+				"pkgconfig(timezonemap)"
+			]
+		}
+	},
+	"source-name": "libtimezonemap",
+	"source-release": "1",
+	"source-version": "0.4.4"
+}
