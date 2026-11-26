@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+releases:
+  id: 16655
+  rss: https://github.com/Kozea/tinycss2/releases.atom
+security:
+  cpe: ~ 

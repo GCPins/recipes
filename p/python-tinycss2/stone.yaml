@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : tinycss2
+version     : "1.5.1"
+release     : 1
+homepage    : https://github.com/Kozea/tinycss2
+upstreams   :
+    - https://github.com/Kozea/tinycss2/archive/refs/tags/v1.5.1.tar.gz : 73543c13c4262ac6926c8fab02ab92805d816bf2681c1be5dc145d74569c7d40
+summary     : A tiny CSS parser
+description : |
+    tinycss2 is a low-level CSS parser and generator written in Python.
+    It can parse strings, return objects representing tokens and blocks, 
+    and generate CSS strings corresponding to these objects.
+license     : BSD-3-Clause
+builddeps   :
+    - python(flit-core)
+setup       : |
+    %patch %(pkgdir)/flit-core-ver.patch
+build       : |
+    %pyproject_build
+install     : |
+    %pyproject_install
