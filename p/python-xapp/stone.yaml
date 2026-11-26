@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : python3-xapp
+version     : "3.0.6"
+release     : 1
+homepage    : https://github.com/linuxmint/python3-xapp
+upstreams   :
+    - https://github.com/linuxmint/python3-xapp/archive/refs/tags/3.0.6.tar.gz : 00972ea77c4747d61718e2e946ed73d3fddcd8fc9de7c49105b7319c74da6953
+summary     : Python3 Xapp Library
+description : |
+    Small Python library that provides extra functionality
+license     : LGPL-2.0-or-later
+setup       : |
+    %meson
+build       : |
+    %meson_build
+install     : |
+    %meson_install
