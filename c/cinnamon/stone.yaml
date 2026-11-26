@@ -53,6 +53,22 @@ builddeps   :
     - pkgconfig(xcomposite)
     - pkgconfig(xext)
     - mesa-libegl-devel
+rundeps     :
+    - python(setproctitle)
+    - python(pygobject)
+    - python(pycairo)
+    - python(dbus-python)
+    - python(pillow)
+    - python(python-pam)
+    - python(tinycss2)
+    - python(psutil)
+    - python(pexpect)
+    - python(pytz)
+    - python(distro)
+    - python(requests)
+    - gsound
+    - python3-xapp
+    - libtimezonemap
 setup       : |
     %meson
 build       : |
