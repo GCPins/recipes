@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+releases:
+  id: 11699
+  rss: https://github.com/dvarrazzo/py-setproctitle/releases.atom
+security:
+  cpe: ~

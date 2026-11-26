@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : py-setproctitle
+version     : "1.3.8"
+release     : 1
+homepage    : https://github.com/dvarrazzo/py-setproctitle
+upstreams   :
+    - https://github.com/dvarrazzo/py-setproctitle/archive/refs/tags/version-1.3.8.tar.gz : 6898099c7ead3819001569ac1d9f9e0428375cf2f7e448bc1a264cec6c27bf2c
+summary     : A Python module to customize the process title
+description : |
+    The setproctitle module allows a process to change its 
+    title, as displayed by system tools such as ps or top.
+license     : BSD-3-Clause
+build       : |
+    %python_setup
+install     : |
+    %python_install

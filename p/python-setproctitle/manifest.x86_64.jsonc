@@ -1,0 +1,26 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"py-setproctitle": {
+			"files": [
+				"/usr/lib/python3.14/site-packages/setproctitle-1.3.8-py3.14.egg-info/PKG-INFO",
+				"/usr/lib/python3.14/site-packages/setproctitle-1.3.8-py3.14.egg-info/SOURCES.txt",
+				"/usr/lib/python3.14/site-packages/setproctitle-1.3.8-py3.14.egg-info/dependency_links.txt",
+				"/usr/lib/python3.14/site-packages/setproctitle-1.3.8-py3.14.egg-info/not-zip-safe",
+				"/usr/lib/python3.14/site-packages/setproctitle-1.3.8-py3.14.egg-info/requires.txt",
+				"/usr/lib/python3.14/site-packages/setproctitle-1.3.8-py3.14.egg-info/top_level.txt",
+				"/usr/lib/python3.14/site-packages/setproctitle/__init__.py",
+				"/usr/lib/python3.14/site-packages/setproctitle/__pycache__/__init__.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/setproctitle/py.typed"
+			],
+			"name": "py-setproctitle",
+			"provides": [
+				"python(setproctitle)"
+			]
+		}
+	},
+	"source-name": "py-setproctitle",
+	"source-release": "1",
+	"source-version": "1.3.8"
+}
