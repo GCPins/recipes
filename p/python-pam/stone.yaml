@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : python-pam
+version     : "2.1.1"
+release     : 1
+homepage    : https://github.com/FirefighterBlu3/python-pam
+upstreams   :
+    - https://github.com/FirefighterBlu3/python-pam/archive/refs/tags/v2.1.1.tar.gz : 1ff45e5f769b987175a52e49f3e8cab46802d60ba4c206f9c8ad895ec43ee6af
+summary     : Python pam module supporting py3
+description : |
+    Python pam module supporting py3 for Linux type systems.
+license     : MIT
+builddeps   :
+    - python(poetry-core)
+build       : |
+    %pyproject_build
+install     : |
+    %pyproject_install

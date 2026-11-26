@@ -1,0 +1,36 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"python-pam": {
+			"build-depends": [
+				"python(poetry-core)"
+			],
+			"files": [
+				"/usr/lib/python3.14/site-packages/pam/__init__.py",
+				"/usr/lib/python3.14/site-packages/pam/__internals.py",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/__init__.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/__init__.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/__internals.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/__internals.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/pam.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/pam.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/version.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/pam/__pycache__/version.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/pam/pam.py",
+				"/usr/lib/python3.14/site-packages/pam/version.py",
+				"/usr/lib/python3.14/site-packages/python_pam-2.1.1.dist-info/METADATA",
+				"/usr/lib/python3.14/site-packages/python_pam-2.1.1.dist-info/RECORD",
+				"/usr/lib/python3.14/site-packages/python_pam-2.1.1.dist-info/WHEEL",
+				"/usr/lib/python3.14/site-packages/python_pam-2.1.1.dist-info/licenses/LICENSE"
+			],
+			"name": "python-pam",
+			"provides": [
+				"python(python-pam)"
+			]
+		}
+	},
+	"source-name": "python-pam",
+	"source-release": "1",
+	"source-version": "2.1.1"
+}
