@@ -1,0 +1,36 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"ptyprocess": {
+			"build-depends": [
+				"python(flit-core)"
+			],
+			"files": [
+				"/usr/lib/python3.14/site-packages/ptyprocess-0.7.0.dist-info/METADATA",
+				"/usr/lib/python3.14/site-packages/ptyprocess-0.7.0.dist-info/RECORD",
+				"/usr/lib/python3.14/site-packages/ptyprocess-0.7.0.dist-info/WHEEL",
+				"/usr/lib/python3.14/site-packages/ptyprocess-0.7.0.dist-info/licenses/LICENSE",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__init__.py",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/__init__.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/__init__.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/_fork_pty.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/_fork_pty.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/ptyprocess.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/ptyprocess.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/util.cpython-314.opt-1.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/__pycache__/util.cpython-314.pyc",
+				"/usr/lib/python3.14/site-packages/ptyprocess/_fork_pty.py",
+				"/usr/lib/python3.14/site-packages/ptyprocess/ptyprocess.py",
+				"/usr/lib/python3.14/site-packages/ptyprocess/util.py"
+			],
+			"name": "ptyprocess",
+			"provides": [
+				"python(ptyprocess)"
+			]
+		}
+	},
+	"source-name": "ptyprocess",
+	"source-release": "1",
+	"source-version": "0.7.0"
+}

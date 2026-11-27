@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : ptyprocess
+version     : "0.7.0"
+release     : 1
+homepage    : https://github.com/pexpect/ptyprocess
+upstreams   :
+    - https://github.com/pexpect/ptyprocess/archive/refs/tags/0.7.0.tar.gz : fdba7eb7833d8bbfb7cdab6d7a348fa0e393078324e406d0ebdad6ae93ed4209
+summary     : Run a subprocess in a pseudo terminal
+description : |
+    Launch a subprocess in a pseudo terminal (pty), and 
+    interact with both the process and its pty.
+license     : ISC
+builddeps   :
+    - python(flit-core)
+setup       : |
+    %patch %(pkgdir)/pyproject-toml.patch
+build       : |
+    %pyproject_build
+install     : |
+    %pyproject_install
