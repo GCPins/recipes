@@ -833,6 +833,7 @@
 				"/usr/share/polkit-1/actions/org.cinnamon.settings-users.policy",
 				"/usr/share/wayland-sessions/cinnamon-wayland.desktop",
 				"/usr/share/xdg-desktop-portal/x-cinnamon-portals.conf",
+				"/usr/share/xdg/menus/cinnamon-applications.menu",
 				"/usr/share/xsessions/cinnamon.desktop"
 			],
 			"name": "cinnamon",
