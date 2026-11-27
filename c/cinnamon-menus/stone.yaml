@@ -19,12 +19,6 @@ builddeps   :
 setup       : |
     %meson
 build       : |
-<<<<<<< HEAD
     %meson_build
 install     : |
     %meson_install
-=======
-    %ninja
-install     : |
-    %ninja_install
->>>>>>> 682b6fb72 (cinnamon-menus: Add at 6.8.0)
