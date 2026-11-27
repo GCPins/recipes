@@ -1,0 +1,55 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"pkgset-aeryn-cinnamon-full": {
+			"depends": [
+				"filelight",
+				"kcalc",
+				"kdeconnect",
+				"neochat",
+				"pkgset-aeryn-cinnamon-recommended"
+			],
+			"files": [
+				"/usr/share/doc/pkgset-aeryn-cinnamon-full/README"
+			],
+			"name": "pkgset-aeryn-cinnamon-full"
+		},
+		"pkgset-aeryn-cinnamon-minimal": {
+			"depends": [
+				"cinnamon",
+				"cinnamon-control-center",
+				"cinnamon-desktop",
+				"cinnamon-menus",
+				"cinnamon-screensaver",
+				"cinnamon-session",
+				"cinnamon-settings-daemon",
+				"cjs",
+				"colord",
+				"muffin",
+				"nemo",
+				"pkgset-aeryn-base-desktop"
+			],
+			"files": [
+				"/usr/share/doc/pkgset-aeryn-cinnamon-minimal/README"
+			],
+			"name": "pkgset-aeryn-cinnamon-minimal"
+		},
+		"pkgset-aeryn-cinnamon-recommended": {
+			"depends": [
+				"kate",
+				"kjournald",
+				"okular",
+				"partitionmanager",
+				"pkgset-aeryn-cinnamon-minimal"
+			],
+			"files": [
+				"/usr/share/doc/pkgset-aeryn-cinnamon-recommended/README"
+			],
+			"name": "pkgset-aeryn-cinnamon-recommended"
+		}
+	},
+	"source-name": "pkgset-aeryn-cinnamon",
+	"source-release": "1",
+	"source-version": "27"
+}

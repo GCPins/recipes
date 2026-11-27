@@ -1,0 +1,73 @@
+# SPDX-FileCopyrightText: 2025 AerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : pkgset-aeryn-cinnamon
+version     : "27" 
+release     : 1
+homepage    : https://aerynos.com/
+summary     : pkgset virtual packages - Cinnamon Desktop
+description : |
+    pkgset virtual packages - Cinnamon Desktop
+license     : GPL-2.0-or-later
+install     : |
+    for i in minimal recommended full; do
+        %install_dir %(installroot)%(docdir)/%(name)-${i}
+        echo "This file will disappear when virtual packages are introduced" > %(installroot)%(docdir)/%(name)-${i}/README
+    done
+packages    :
+    - "%(name)-minimal":
+        summary: Minimal packages for a Cinnamon Desktop session
+        description: |
+            Minimal packages for a Cinnamon Desktop session
+        rundeps:
+            # Cinnamon bits
+            - cinnamon
+            - cinnamon-desktop
+            - cinnamon-menus
+            - cinnamon-control-center
+            - cinnamon-settings-daemon
+            - cinnamon-screensaver
+            - cinnamon-session
+            - cjs
+            - muffin
+            
+            # Basic apps (Gear)
+            - nemo
+
+            # Other deps
+            - colord
+            - xapp-symbolic-icons
+
+            # Desktop base profile
+            - pkgset-aeryn-base-desktop
+        paths:
+            - /usr/share/doc/%(name)-minimal/README
+
+    - "%(name)-recommended":
+        summary: Cinnamon Desktop plus recommended applications
+        description: |
+            Cinnamon Desktop plus recommended applications
+        rundeps:
+            - kate
+            - kjournald
+            - okular
+            - partitionmanager
+
+            - "%(name)-minimal"
+        paths:
+            - /usr/share/doc/%(name)-recommended/README
+
+    - "%(name)-full":
+        summary: Cinnamon Desktop plus all KDE applications
+        description: |
+            Cinnamon Desktop plus all KDE applications. You probably don't want this.
+        rundeps:
+            # Way more apps
+            - filelight
+            - kcalc
+            - kdeconnect
+            - neochat
+
+            - "%(name)-recommended"
+        paths:
+            - /usr/share/doc/%(name)-full/README
