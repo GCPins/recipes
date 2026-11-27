@@ -1,8 +1,0 @@
-# SPDX-FileCopyrightText: 2026 aerynOS Developers
-# SPDX-License-Identifier: MPL-2.0
-
-releases:
-  id: 15196
-  rss: https://github.com/linuxmint/python3-xapp/releases.atom
-security:
-  cpe: ~ # No CPE found, last checked (2026-11-26)

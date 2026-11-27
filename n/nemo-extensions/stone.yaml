@@ -1,0 +1,74 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : nemo-extensions
+version     : "6.8.1"
+release     : 1
+homepage    : https://github.com/linuxmint/nemo-extensions
+upstreams   :
+    - https://github.com/linuxmint/nemo-extensions/archive/refs/tags/6.8.1.tar.gz : e0004c6b8087df3d0a35598b05a7acdc84ac775a20eac5d07d0e8a705e70a193
+summary     : Extensions for the Nemo file manager
+description : |
+    Official set of extensions for the Nemo file manager in Cinnamon.
+license     :
+    - GPL-2.0-or-later
+    - CC-BY-ND-3.0
+builddeps   :
+    - pkgconfig(glib-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libnemo-extension)
+    - pkgconfig(pygobject-3.0)
+    - pkgconfig(python3-embed)
+    - python(setuptools)
+setup       : |
+    for ext in nemo-python nemo-fileroller nemo-image-converter; do
+        pushd "$ext"
+        %meson
+        popd
+    done
+build       : |
+    for ext in nemo-python nemo-fileroller nemo-image-converter; do
+        pushd "$ext"
+        %meson_build
+        popd
+    done
+install     : |
+    for ext in nemo-python nemo-fileroller nemo-image-converter; do
+        pushd "$ext"
+        %meson_install
+        popd
+    done
+
+    export PKG_CONFIG_PATH="%(installroot)/usr/lib/pkgconfig:${PKG_CONFIG_PATH:-}"
+    for ext in nemo-emblems; do
+        pushd "$ext"
+        %python_setup
+        %python_install
+        popd
+    done
+packages    :
+    - "nemo-python":
+        summary: Python bindings for Nemo extensions
+        paths:
+            - /usr/lib/nemo/extensions-3.0/libnemo-python.so
+            - /usr/share/doc/nemo-python
+    - "nemo-fileroller":
+        summary: File archiver extension for Nemo
+        rundeps:
+            - binary(file-roller)
+        paths:
+            - /usr/lib/nemo/extensions-3.0/libnemo-fileroller.so
+    - "nemo-image-converter":
+        summary: Image resize and rotate extension for Nemo
+        rundeps:
+            - binary(convert)
+        paths:
+            - /usr/lib/nemo/extensions-3.0/libnemo-image-converter.so
+            - /usr/share/nemo-image-converter
+    - "nemo-emblems":
+        summary: Change folder and file emblems in Nemo
+        rundeps:
+            - nemo-python
+        paths:
+            - /usr/share/nemo-python/extensions/nemo-emblems.py
+            - /usr/share/nemo-emblems

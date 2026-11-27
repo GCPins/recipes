@@ -1,0 +1,144 @@
+/** Human readable report. This is not consumed by boulder */
+{
+	"manifest-version": "0.2",
+	"packages": {
+		"nemo-emblems": {
+			"build-depends": [
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(libnemo-extension)",
+				"pkgconfig(pygobject-3.0)",
+				"pkgconfig(python3-embed)",
+				"python(setuptools)"
+			],
+			"depends": [
+				"nemo-python"
+			],
+			"files": [
+				"/usr/share/nemo-python/extensions/nemo-emblems.py"
+			],
+			"name": "nemo-emblems"
+		},
+		"nemo-extensions": {
+			"build-depends": [
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(libnemo-extension)",
+				"pkgconfig(pygobject-3.0)",
+				"pkgconfig(python3-embed)",
+				"python(setuptools)"
+			],
+			"files": [
+				"/usr/lib/python3.14/site-packages/nemo_emblems-6.8.1-py3.14.egg-info/PKG-INFO",
+				"/usr/lib/python3.14/site-packages/nemo_emblems-6.8.1-py3.14.egg-info/SOURCES.txt",
+				"/usr/lib/python3.14/site-packages/nemo_emblems-6.8.1-py3.14.egg-info/dependency_links.txt",
+				"/usr/lib/python3.14/site-packages/nemo_emblems-6.8.1-py3.14.egg-info/top_level.txt"
+			],
+			"name": "nemo-extensions",
+			"provides": [
+				"python(nemo-emblems)"
+			]
+		},
+		"nemo-extensions-devel": {
+			"build-depends": [
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(libnemo-extension)",
+				"pkgconfig(pygobject-3.0)",
+				"pkgconfig(python3-embed)",
+				"python(setuptools)"
+			],
+			"depends": [
+				"nemo-extensions"
+			],
+			"files": [
+				"/usr/lib/pkgconfig/nemo-python.pc"
+			],
+			"name": "nemo-extensions-devel",
+			"provides": [
+				"pkgconfig(nemo-python)"
+			]
+		},
+		"nemo-fileroller": {
+			"build-depends": [
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(libnemo-extension)",
+				"pkgconfig(pygobject-3.0)",
+				"pkgconfig(python3-embed)",
+				"python(setuptools)"
+			],
+			"depends": [
+				"binary(file-roller)",
+				"soname(libc.so.6(x86_64))",
+				"soname(libgio-2.0.so.0(x86_64))",
+				"soname(libglib-2.0.so.0(x86_64))",
+				"soname(libgobject-2.0.so.0(x86_64))",
+				"soname(libnemo-extension.so.1(x86_64))"
+			],
+			"files": [
+				"/usr/lib/nemo/extensions-3.0/libnemo-fileroller.so"
+			],
+			"name": "nemo-fileroller",
+			"provides": [
+				"soname(nemo/extensions-3.0/libnemo-fileroller.so(x86_64))"
+			]
+		},
+		"nemo-image-converter": {
+			"build-depends": [
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(libnemo-extension)",
+				"pkgconfig(pygobject-3.0)",
+				"pkgconfig(python3-embed)",
+				"python(setuptools)"
+			],
+			"depends": [
+				"binary(convert)",
+				"soname(libc.so.6(x86_64))",
+				"soname(libgio-2.0.so.0(x86_64))",
+				"soname(libglib-2.0.so.0(x86_64))",
+				"soname(libgobject-2.0.so.0(x86_64))",
+				"soname(libgtk-3.so.0(x86_64))",
+				"soname(libnemo-extension.so.1(x86_64))"
+			],
+			"files": [
+				"/usr/lib/nemo/extensions-3.0/libnemo-image-converter.so",
+				"/usr/share/nemo-image-converter/nemo-image-resize.ui",
+				"/usr/share/nemo-image-converter/nemo-image-rotate.ui"
+			],
+			"name": "nemo-image-converter",
+			"provides": [
+				"soname(nemo/extensions-3.0/libnemo-image-converter.so(x86_64))"
+			]
+		},
+		"nemo-python": {
+			"build-depends": [
+				"pkgconfig(glib-2.0)",
+				"pkgconfig(gtk+-3.0)",
+				"pkgconfig(libnemo-extension)",
+				"pkgconfig(pygobject-3.0)",
+				"pkgconfig(python3-embed)",
+				"python(setuptools)"
+			],
+			"depends": [
+				"soname(libc.so.6(x86_64))",
+				"soname(libglib-2.0.so.0(x86_64))",
+				"soname(libgobject-2.0.so.0(x86_64))",
+				"soname(libgtk-3.so.0(x86_64))",
+				"soname(libnemo-extension.so.1(x86_64))",
+				"soname(libpython3.14.so.1.0(x86_64))"
+			],
+			"files": [
+				"/usr/lib/nemo/extensions-3.0/libnemo-python.so"
+			],
+			"name": "nemo-python",
+			"provides": [
+				"soname(nemo/extensions-3.0/libnemo-python.so(x86_64))"
+			]
+		}
+	},
+	"source-name": "nemo-extensions",
+	"source-release": "1",
+	"source-version": "6.8.1"
+}
