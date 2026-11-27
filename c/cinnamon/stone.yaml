@@ -72,6 +72,8 @@ rundeps     :
     - adwaita-icon-theme
     - adwaita-icon-theme-legacy
     - hicolor-icon-theme
+    - xapp-symbolic-icons
+    - colord
 setup       : |
     %meson
 build       : |
