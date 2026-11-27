@@ -16,7 +16,6 @@ license     :
     - GPL-2.0-only
 builddeps   :
     - binary(gtkdoc-scan)
-    - pkgconfig(cinnamon-desktop)
     - pkgconfig(exempi-2.0)
     - pkgconfig(gail-3.0)
     - pkgconfig(gio-2.0)
@@ -37,7 +36,9 @@ builddeps   :
     - pkgconfig(pango)
     - pkgconfig(wayland-client)
     - pkgconfig(x11)
+    - pkgconfig(cinnamon-desktop)
     - pkgconfig(xapp)
+    - libgsf
 setup       : |
     %patch %(pkgdir)/fix-splitter-null.patch
     %meson

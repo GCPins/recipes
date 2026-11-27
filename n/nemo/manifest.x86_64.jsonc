@@ -5,6 +5,7 @@
 		"nemo": {
 			"build-depends": [
 				"binary(gtkdoc-scan)",
+				"libgsf",
 				"pkgconfig(cinnamon-desktop)",
 				"pkgconfig(exempi-2.0)",
 				"pkgconfig(gail-3.0)",
@@ -190,6 +191,7 @@
 		"nemo-devel": {
 			"build-depends": [
 				"binary(gtkdoc-scan)",
+				"libgsf",
 				"pkgconfig(cinnamon-desktop)",
 				"pkgconfig(exempi-2.0)",
 				"pkgconfig(gail-3.0)",
