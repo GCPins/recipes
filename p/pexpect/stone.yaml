@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 aerynOS Developers
+# SPDX-License-Identifier: MPL-2.0
+
+name        : pexpect
+version     : "4.9"
+release     : 1
+homepage    : https://github.com/pexpect/pexpect
+upstreams   :
+    - https://github.com/pexpect/pexpect/archive/refs/tags/4.9.tar.gz : 13756b834dba0adf7603be77d943cc427011983ecd7c58b59b9bf122a1063e40
+summary     : A Python module for controlling interactive programs in a pseudo-terminal
+description : |
+    Pure Python Expect-like module that makes Python a better tool for 
+    controlling other applications. It is a pure Python module for spawning 
+    child applications; controlling them; and responding to expected patterns 
+    in their output. Allows your script to spawn a child application and control 
+    it as if a human were typing commands.
+license     : ISC
+build       : |
+    %python_setup
+install     : |
+    %python_install
