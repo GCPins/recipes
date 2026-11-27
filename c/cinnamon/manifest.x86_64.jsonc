@@ -45,7 +45,11 @@
 				"pkgconfig(xext)"
 			],
 			"depends": [
+				"adwaita-icon-theme",
+				"adwaita-icon-theme-legacy",
+				"colord",
 				"gsound",
+				"hicolor-icon-theme",
 				"interpreter(/usr/lib/ld-linux-x86-64.so.2(x86_64))",
 				"libtimezonemap",
 				"python(dbus-python)",
@@ -99,7 +103,8 @@
 				"soname(muffin/libmuffin-clutter-0.so.0(x86_64))",
 				"soname(muffin/libmuffin-cogl-0.so.0(x86_64))",
 				"soname(muffin/libmuffin-cogl-pango-0.so.0(x86_64))",
-				"soname(muffin/libmuffin-cogl-path-0.so.0(x86_64))"
+				"soname(muffin/libmuffin-cogl-path-0.so.0(x86_64))",
+				"xapp-symbolic-icons"
 			],
 			"files": [
 				"/usr/bin/cinnamon",
@@ -708,6 +713,7 @@
 				"/usr/share/dbus-1/services/org.Cinnamon.Slideshow.service",
 				"/usr/share/dbus-1/services/org.cinnamon.BackupLocker.service",
 				"/usr/share/dbus-1/services/org.cinnamon.CalendarServer.service",
+				"/usr/share/defaults/xdg/menus/cinnamon-applications.menu",
 				"/usr/share/desktop-directories/cinnamon-audio-video.directory",
 				"/usr/share/desktop-directories/cinnamon-c.directory",
 				"/usr/share/desktop-directories/cinnamon-development.directory",
