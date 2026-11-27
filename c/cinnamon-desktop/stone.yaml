@@ -33,12 +33,6 @@ builddeps   :
 setup       : |
     %meson
 build       : |
-<<<<<<< HEAD
     %meson_build
 install     : |
     %meson_install
-=======
-    %ninja
-install     : |
-    %ninja_install
->>>>>>> 21c4ba1 (cinnamon-desktop: Add at 6.8.1)
