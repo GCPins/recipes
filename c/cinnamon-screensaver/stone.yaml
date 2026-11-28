@@ -29,10 +29,10 @@ builddeps   :
     - pkgconfig(xinerama)
     - pkgconfig(xrandr)
 setup       : |
-    %meson
+    %meson -Dpam-prefix=%(vendordir)
 build       : |
     %meson_build
 install     : |
     %meson_install
-
-    %install_file %(installroot)/etc/pam.d/cinnamon-screensaver %(installroot)%(vendordir)/pam.d/cinnamon-screensaver
+    
+    #%install_file %(installroot)/etc/pam.d/cinnamon-screensaver %(installroot)%(vendordir)/pam.d/cinnamon-screensaver
