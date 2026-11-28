@@ -44,3 +44,4 @@ build       : |
     %meson_build
 install     : |
     %meson_install
+    %install_file %(installroot)/etc/xdg/autostart/* -t %(installroot)/usr/share/xdg/autostart/

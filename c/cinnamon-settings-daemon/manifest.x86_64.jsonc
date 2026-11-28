@@ -218,7 +218,20 @@
 				"/usr/share/icons/hicolor/scalable/apps/csd-xrandr.svg",
 				"/usr/share/icons/hicolor/scalable/apps/csd-xsettings.svg",
 				"/usr/share/polkit-1/actions/org.cinnamon.settings-daemon.plugins.wacom.policy",
-				"/usr/share/polkit-1/actions/org.cinnamon.settingsdaemon.datetimemechanism.policy"
+				"/usr/share/polkit-1/actions/org.cinnamon.settingsdaemon.datetimemechanism.policy",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-a11y-settings.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-clipboard.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-color.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-housekeeping.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-keyboard.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-media-keys.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-power.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-print-notifications.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-screensaver-proxy.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-settings-remap.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-smartcard.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-wacom.desktop",
+				"/usr/share/xdg/autostart/cinnamon-settings-daemon-xsettings.desktop"
 			],
 			"name": "cinnamon-settings-daemon",
 			"provides": [
