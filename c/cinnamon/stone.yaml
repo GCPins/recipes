@@ -81,5 +81,5 @@ build       : |
 install     : |
     %meson_install
 
-    # menu config file
     %install_file %(workdir)/files/etc/xdg/menus/cinnamon-applications.menu %(installroot)/usr/share/xdg/menus/cinnamon-applications.menu
+    %install_file %(installroot)/etc/pam.d/cinnamon %(installroot)%(vendordir)/pam.d/cinnamon

@@ -713,7 +713,7 @@
 				"/usr/share/dbus-1/services/org.Cinnamon.Slideshow.service",
 				"/usr/share/dbus-1/services/org.cinnamon.BackupLocker.service",
 				"/usr/share/dbus-1/services/org.cinnamon.CalendarServer.service",
-				"/usr/share/defaults/xdg/menus/cinnamon-applications.menu",
+				"/usr/share/defaults/pam.d/cinnamon",
 				"/usr/share/desktop-directories/cinnamon-audio-video.directory",
 				"/usr/share/desktop-directories/cinnamon-c.directory",
 				"/usr/share/desktop-directories/cinnamon-development.directory",
