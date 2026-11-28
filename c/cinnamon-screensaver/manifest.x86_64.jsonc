@@ -96,6 +96,7 @@
 				"/usr/share/cinnamon-screensaver/widgets/transparentButton.py",
 				"/usr/share/cinnamon-screensaver/widgets/volumeSlider.py",
 				"/usr/share/dbus-1/services/org.cinnamon.ScreenSaver.service",
+				"/usr/share/defaults/pam.d/cinnamon-screensaver",
 				"/usr/share/icons/hicolor/scalable/actions/screensaver-switch-users-symbolic.svg",
 				"/usr/share/icons/hicolor/scalable/actions/screensaver-unlock-symbolic.svg",
 				"/usr/share/icons/hicolor/scalable/apps/csr-backup-locker-icon.svg",

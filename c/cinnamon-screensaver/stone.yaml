@@ -34,3 +34,5 @@ build       : |
     %meson_build
 install     : |
     %meson_install
+
+    %install_file %(installroot)/etc/pam.d/cinnamon-screensaver %(installroot)%(vendordir)/pam.d/cinnamon-screensaver
